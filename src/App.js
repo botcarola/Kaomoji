@@ -1,5 +1,5 @@
-
 import './App.scss';
+import Card from './components/Card';
 
 const App = () => {
 
@@ -21,12 +21,15 @@ const App = () => {
 
   return(
     <div> 
+
+      <main>
       <div className='container-ascii'>
-          {asciiExpressions.map( curr => <p className="ascii-size">{curr}</p>)}    
+          {asciiExpressions.map(curr => <Card clase="card-emoji" contenido={curr} />)}              
       </div>
-      <div className='container-ascii'>
-        {asciiCharacters.map(curr => <p className="ascii-size">{curr}</p>)}
-      </div>
+      </main>
+
+      
+
     </div>
   )
 }
